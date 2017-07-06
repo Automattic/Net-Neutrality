@@ -155,7 +155,7 @@
 	display: block !important;
 	background-color: #fff;
 	background-position: center center !important;
-	background-image: url('/wp-content/mu-plugins/atlas/images/loading.gif') !important;
+	background-image: url('./loading.gif') !important;
 	background-repeat: no-repeat !important;
 	background-size: 32px 32px !important;
 	position: absolute !important;

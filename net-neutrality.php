@@ -90,7 +90,7 @@ class Net_Neutrality {
 
 	function show_ribbon() {
 
-		if ( time() > strtotime( '2014-10-01 23:59:59' ) ) {
+		if ( time() > strtotime( '2017-07-12 23:59:59' ) ) {
 			return;
 		}
 
@@ -101,8 +101,8 @@ class Net_Neutrality {
 		if ( ! $this->show_ribbon() ) {
 			return;
 		}
-		wp_enqueue_style( 'net-neutrality', plugins_url( 'net-neutrality/net-neutrality.css', __FILE__ ), array(), '20140904' );
-		wp_enqueue_script( 'net-neutrality-js', plugins_url( 'net-neutrality/net-neutrality.js', __FILE__ ), array(), '20140904' );
+		wp_enqueue_style( 'net-neutrality', plugins_url( 'net-neutrality.css', __FILE__ ), array(), '20140904' );
+		wp_enqueue_script( 'net-neutrality-js', plugins_url( 'net-neutrality.js', __FILE__ ), array(), '20140904' );
 	}
 
 	function ribbon() {
