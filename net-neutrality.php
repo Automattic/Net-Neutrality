@@ -113,14 +113,20 @@ class Net_Neutrality {
 		?>
 		<div id="net-neutrality-overlay" style="display: none;">
 			<div>
-				<p>Isn't this frustrating?</p>
-				<p>Help keep the internet free of slow lanes by supporting net neutrality.</p>
-				<p><a href="http://battleforthenet.com" target="_blank">Learn more and take action</a></p>
+				<p><?php esc_html_e( "Isn't this frustrating?", 'net-neutrality-wpcom' ); ?></p>
+				<p><?php esc_html_e( 'Help keep the internet free of slow lanes by supporting net neutrality.', 'net-neutrality-wpcom' ); ?></p>
+				<p>
+					<a href="http://battleforthenet.com" target="_blank">
+						<?php esc_html_e( 'Learn more and take action', 'net-neutrality-wpcom' ); ?>
+					</a>
+				</p>
 			</div>
 		</div>
 
 		<div id="net-neutrality-ribbon" style="display: none;">
-			<a href="http://battleforthenet.com" target="_blank">Learn about net neutrality and take action</a>
+			<a href="http://battleforthenet.com" target="_blank">
+				<?php esc_html_e( 'Learn about net neutrality and take action', 'net-neutrality-wpcom' ); ?>
+			</a>
 		</div>
 
 		<?php
