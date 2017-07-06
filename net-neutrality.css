@@ -1,0 +1,201 @@
+/**
+ * Net Neutrality Protest
+ */
+
+#net-neutrality-overlay a, #net-neutrality-overlay, #net-neutrality-ribbon a, #net-neutrality-ribbon {
+	-moz-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+
+#net-neutrality-overlay {
+	opacity: 0;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	background: rgba(0,0,0,.7);
+	overflow: hidden;
+	z-index: 99000;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	color: #eee;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	font-weight: 900;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: .1em;
+	text-decoration: none;
+	-webkit-transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+}
+
+#net-neutrality-overlay div {
+	max-width: 500px;
+	height: 240px;
+	position: absolute;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	padding: 30px;
+	background: #222;
+	top: 50%;
+	left: 50%;
+	margin-top: -120px;
+	margin-left: -250px;
+}
+
+#net-neutrality-overlay p {
+	margin-bottom: 1em;
+	padding: 0;
+}
+
+#net-neutrality-overlay a {
+	color: #ffd500;
+	padding: 10px;
+}
+
+#net-neutrality-overlay a:hover {
+	color: #000;
+	background: #ffd500;
+}
+
+#net-neutrality-ribbon {
+	opacity: 0;
+}
+
+#net-neutrality-ribbon a {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	line-height: 50px;
+	overflow: hidden;
+	background: #222;
+	z-index: 900;
+	font-family: 'Open Sans', sans-serif;
+	color: #eee;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	font-weight: 900;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: .1em;
+	text-decoration: none;
+	-webkit-transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+	height: 50px;
+}
+
+#net-neutrality-ribbon a:hover {
+	background: #444;
+	color: #ffd500;
+}
+
+
+
+@media (max-width: 640px) {
+	#net-neutrality-ribbon a {
+		line-height: 30px;
+		padding: 10px 0;
+		letter-spacing: 0;
+	}
+	#net-neutrality-ribbon a {
+		display: block;
+	}
+
+	#net-neutrality-overlay div {
+		width: 100%;
+		padding: 30px;
+		top: 60px;
+		left: auto;
+		margin-top: 0;
+		margin-left: 0;
+	}
+
+}
+
+@media (max-width: 360px) {
+	#net-neutrality-ribbon a {
+		display: none;
+	}
+}
+
+@media (max-height: 250px) {
+	#net-neutrality-ribbon a {
+		line-height: 20px;
+		padding: 3px 0;
+		letter-spacing: 0;
+	}
+	#net-neutrality-ribbon a {
+		display: none;
+	}
+}
+
+
+/**
+ * Loading class
+ */
+
+.nn-loading {
+	position: relative;
+	overflow: hidden;
+	height: 300px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.nn-loading .nn-overlay {
+	content: "" !important;
+	display: block !important;
+	background-color: #fff;
+	background-position: center center !important;
+	background-image: url('/wp-content/mu-plugins/atlas/images/loading.gif') !important;
+	background-repeat: no-repeat !important;
+	background-size: 32px 32px !important;
+	position: absolute !important;
+	z-index: 1 !important;
+	left: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	top: 0 !important;
+	width: auto !important;
+	height: auto  !important
+}
+
+.nn-loading .nn-text {
+	line-height: 1.6;
+	position: absolute;
+	top: 50%;
+	text-align: center;
+	height: 20px;
+	margin-top: 30px;
+	font-size: 15px;
+	z-index: 10;
+	width: 200px;
+	left: 50%;
+	margin-left: -100px;
+}
+
+
+.nn-loading .nn-text strong {
+	color: #000;
+	background: #ffd500;
+	display: inline-block;
+	padding: 1px 5px;
+	margin-top: 3px;
+	border-radius: 2px;
+	border-bottom: 2px solid goldenrod;
+}
+
+.nn-loading .nn-text strong:hover {
+	background: #ffe355;
+	border-bottom: 2px solid #fac540;
+}
+
+
