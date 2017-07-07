@@ -34,7 +34,12 @@
 	-webkit-backface-visibility: hidden;
 }
 
+#net-neutrality-overlay * {
+	display: block;
+}
+
 #net-neutrality-overlay div {
+	display: block;
 	max-width: 500px;
 	height: 240px;
 	position: absolute;
@@ -150,6 +155,10 @@
 	text-align: center;
 }
 
+.nn-loading * {
+	display: none;
+}
+
 .nn-loading .nn-overlay {
 	content: "" !important;
 	display: block !important;
@@ -170,6 +179,7 @@
 
 .nn-loading .nn-text {
 	line-height: 1.6;
+	display: block;
 	position: absolute;
 	top: 50%;
 	text-align: center;
@@ -194,8 +204,7 @@
 }
 
 .nn-loading .nn-text strong:hover {
+	display: inline-block;
 	background: #ffe355;
 	border-bottom: 2px solid #fac540;
 }
-
-

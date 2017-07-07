@@ -89,11 +89,6 @@ class Net_Neutrality {
 	}
 
 	function show_ribbon() {
-
-		if ( time() > strtotime( '2017-07-12 23:59:59' ) ) {
-			return;
-		}
-
 		return 'on' == $this->get_option( 'enabled' );
 	}
 

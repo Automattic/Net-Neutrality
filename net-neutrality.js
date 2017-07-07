@@ -5,13 +5,13 @@
 function netneutrality () {
 
 	// add loading class to a couple of random posts
-	var randomElements = jQuery("body.blog .post").get().sort(function() {
+	var randomElements = jQuery("body.blog").get().sort(function() {
 		return Math.round(Math.random()) - 0.5;
-	}).slice(0, 3);
+	}).slice(0, 5);
 
 	// add class and text
 	jQuery(randomElements).addClass('nn-loading');
-	var bgColor = jQuery('.post').css('background-color');
+	var bgColor = jQuery('body.blog').css('background-color');
 	if ( bgColor.split('rgba').length > 1 ) {
 		bgColor = '#fff';
 	}
