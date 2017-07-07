@@ -48,6 +48,7 @@
 				$( '.post' ).removeClass( 'nn-loading' );
 				thisOverlay.remove();
 				$( this ).hide().css( 'opacity', '0' );
+				$( '#net-neutrality-ribbon' ).show().css( 'opacity', '1' );
 			} );
 		} );
 	}
