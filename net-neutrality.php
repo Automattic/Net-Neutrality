@@ -101,8 +101,28 @@ class Net_Neutrality {
 		if ( ! $this->show_ribbon() ) {
 			return;
 		}
+
+		$yep_still_loading = wp_kses(
+			esc_html__( 'Yep... <em>still</em> loading...', 'net-neutrality-wpcom' ),
+			array( 'em' => array() )
+		);
+
+		$will_happen_string = wp_kses(
+			esc_html__( 'This is what will happen without real net neutrality. <br><strong>Make it stop!</strong>', 'net-neutrality-wpcom' ),
+			array( 'br' => array(), 'strong' => array() )
+		);
+
 		wp_enqueue_style( 'net-neutrality', plugins_url( 'net-neutrality.css', __FILE__ ), array(), '20140904' );
-		wp_enqueue_script( 'net-neutrality-js', plugins_url( 'net-neutrality.js', __FILE__ ), array(), '20140904' );
+		wp_register_script( 'net-neutrality-js', plugins_url( 'net-neutrality.js', __FILE__ ), array(), '20140904' );
+		wp_localize_script( 'net-neutrality-js', 'netNeutrality', array(
+			'strings' => array(
+				'loading'         => esc_html__( 'Loading...', 'net-neutrality-wpcom' ),
+				'stillLoading'    => esc_html__( 'Still loading...', 'net-neutrality-wpcom' ),
+				'yepStillLoading' => $yep_still_loading,
+				'willHappen'      => $will_happen_string,
+			)
+		) );
+		wp_enqueue_script( 'net-neutrality-js' );
 	}
 
 	function ribbon() {

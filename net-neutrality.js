@@ -8,7 +8,8 @@
 			posts = $( 'body.blog .post' ),
 			randomElements = posts.get().sort( function() {
 				return Math.round( Math.random() ) - 0.5;
-			} ).slice( 0, 3 );
+			} ).slice( 0, 3 ),
+			decodedLoading = $( '<div/>' ).html( netNeutrality.strings.loading ).text();
 
 		var bgColor = $( '.post' ).css( 'background-color' );
 		if ( bgColor.split( 'rgba' ).length > 1 ) {
@@ -17,19 +18,21 @@
 
 		nnLoading = $( randomElements );
 		nnLoading.addClass( 'nn-loading' );
-		nnLoading.append( '<div style="background-color: ' + bgColor + ';" class="nn-overlay"><div class="nn-text">Loading...<div><div>' );
+		nnLoading.append( '<div style="background-color: ' + bgColor + ';" class="nn-overlay"><div class="nn-text">' + decodedLoading + '<div><div>' );
 
 
 		setTimeout( function() {
-			$( '.nn-text' ).html('Still loading...');
+			$( '.nn-text' ).html( netNeutrality.strings.stillLoading );
 		}, 4000 );
 
-		setTimeout(function() {
-			$( '.nn-text' ).html('Yep... <em>still</em> loading...');
+		setTimeout( function() {
+			var decoded = $( '<div/>' ).html( netNeutrality.strings.yepStillLoading ).text();
+			$( '.nn-text' ).html( decoded );
 		}, 8000 );
 
-		setTimeout(function() {
-			$( '.nn-text' ).html('This is what will happen without real net neutrality. <br><strong>Make it stop!</strong>');
+		setTimeout( function() {
+			var decoded = $( '<div/>' ).html( netNeutrality.strings.willHappen ).text();
+			$( '.nn-text' ).html( decoded );
 		}, 12000 );
 
 		nnLoading.on( 'click', '.nn-overlay', function () {
