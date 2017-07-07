@@ -2,52 +2,56 @@
  * Net Neutrality JS
  */
 
-function netneutrality () {
+( function( $ ) {
+	function netneutrality () {
+		var nnLoading,
+			posts = $( 'body.blog .post' ),
+			randomElements = posts.get().sort( function() {
+				return Math.round( Math.random() ) - 0.5;
+			} ).slice( 0, 3 ),
+			decodedLoading = $( '<div/>' ).html( netNeutrality.strings.loading ).text();
 
-	// add loading class to a couple of random posts
-	var randomElements = jQuery("body.blog .post").get().sort(function() {
-		return Math.round(Math.random()) - 0.5;
-	}).slice(0, 3);
+		var bgColor = $( '.post' ).css( 'background-color' );
+		if ( bgColor.split( 'rgba' ).length > 1 ) {
+			bgColor = '#fff';
+		}
 
-	// add class and text
-	jQuery(randomElements).addClass('nn-loading');
-	var bgColor = jQuery('.post').css('background-color');
-	if ( bgColor.split('rgba').length > 1 ) {
-		bgColor = '#fff';
+		nnLoading = $( randomElements );
+		nnLoading.addClass( 'nn-loading' );
+		nnLoading.append( '<div style="background-color: ' + bgColor + ';" class="nn-overlay"><div class="nn-text">' + decodedLoading + '<div><div>' );
+
+
+		setTimeout( function() {
+			$( '.nn-text' ).html( netNeutrality.strings.stillLoading );
+		}, 4000 );
+
+		setTimeout( function() {
+			var decoded = $( '<div/>' ).html( netNeutrality.strings.yepStillLoading ).text();
+			$( '.nn-text' ).html( decoded );
+		}, 8000 );
+
+		setTimeout( function() {
+			var decoded = $( '<div/>' ).html( netNeutrality.strings.willHappen ).text();
+			$( '.nn-text' ).html( decoded );
+		}, 12000 );
+
+		nnLoading.on( 'click', '.nn-overlay', function () {
+			var thisOverlay = $ ( this );
+			nnOverlay = $( '#net-neutrality-overlay' );
+			nnOverlay.show().css( 'opacity', '1' );
+
+			$( '#net-neutality-overlay-content' ).click( function( event ) {
+				event.stopPropagation();
+			} );
+
+			nnOverlay.on( 'click', function() {
+				var post = thisOverlay.closest( '.post' );
+				post.removeClass( 'nn-loading' );
+				thisOverlay.remove();
+				$( this ).hide().css( 'opacity', '0' );
+			} );
+		} );
 	}
-	jQuery('.nn-loading').append('<div style="background-color: ' + bgColor + ';" class="nn-overlay"><div class="nn-text">Loading...<div><div>')
 
-	// open popup link
-	jQuery('.nn-loading').click(function () {
-		jQuery('#net-neutrality-overlay').show().css('opacity', '1');
-	});
-
-	// close on anywhere click
-	jQuery('#net-neutrality-overlay').click(function () {
-		jQuery(this).remove();
-		jQuery('.nn-loading').removeClass('nn-loading');
-		jQuery('.nn-text').remove();
-		jQuery('#net-neutrality-ribbon').show();
-		jQuery('#net-neutrality-ribbon').css('opacity', '1');
-	});
-
-};
-
-netneutrality();
-
-// change text after a while
-jQuery(document).ready(function () {
-
-	setTimeout(function() {
-		jQuery('.nn-text').html('Still loading...');
-	}, 4000);
-
-	setTimeout(function() {
-		jQuery('.nn-text').html('Yep... <em>still</em> loading...');
-	}, 8000);
-
-	setTimeout(function() {
-		jQuery('.nn-text').html('This is what will happen without real net neutrality. <br><strong>Make it stop!</strong>');
-	}, 12000);
-
-});
+	netneutrality();
+})( jQuery );
