@@ -186,8 +186,8 @@
 	color: #000;
 	background: #ffd500;
 	display: inline-block;
-	padding: 1px 5px;
-	margin-top: 3px;
+	padding: 2px 12px;
+	margin-top: 12px;
 	border-radius: 2px;
 	border-bottom: 2px solid goldenrod;
 }
