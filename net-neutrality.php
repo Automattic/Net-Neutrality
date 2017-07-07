@@ -108,7 +108,7 @@ class Net_Neutrality {
 		);
 
 		$will_happen_string = wp_kses(
-			esc_html__( 'This is what will happen without real net neutrality. <br><strong>Make it stop!</strong>', 'net-neutrality-wpcom' ),
+			esc_html__( 'This is what will happen without Net Neutrality. <br><strong>Make it stop!</strong>', 'net-neutrality-wpcom' ),
 			array( 'br' => array(), 'strong' => array() )
 		);
 
@@ -145,7 +145,7 @@ class Net_Neutrality {
 
 		<div id="net-neutrality-ribbon" style="display: none;">
 			<a href="http://battleforthenet.com" target="_blank">
-				<?php esc_html_e( 'Learn about net neutrality and take action', 'net-neutrality-wpcom' ); ?>
+				<?php esc_html_e( 'Learn more and take action to protect Net Neutrality', 'net-neutrality-wpcom' ); ?>
 			</a>
 		</div>
 
