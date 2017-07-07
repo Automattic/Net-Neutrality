@@ -41,7 +41,7 @@ class Net_Neutrality {
 		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
 
 		// TODO: Probably load this in the header to minimize flashing content?
-		add_action( 'wp_footer', array( $this, 'enqueue_style' ));
+		add_action( 'wp_footer', array( $this, 'enqueue_style' ), 11 );
 	}
 
 	function admin_menu() {
@@ -112,7 +112,7 @@ class Net_Neutrality {
 
 		?>
 		<div id="net-neutrality-overlay" style="display: none;">
-			<div>
+			<div id="net-neutality-overlay-content">
 				<p><?php esc_html_e( "Isn't this frustrating?", 'net-neutrality-wpcom' ); ?></p>
 				<p><?php esc_html_e( 'Help keep the internet free of slow lanes by supporting net neutrality.', 'net-neutrality-wpcom' ); ?></p>
 				<p>
