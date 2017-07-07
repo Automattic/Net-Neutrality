@@ -19,17 +19,18 @@
 		nnLoading.addClass( 'nn-loading' );
 		nnLoading.append( '<div style="background-color: ' + bgColor + ';" class="nn-overlay"><div class="nn-text">Loading...<div><div>' );
 
-		setTimeout(function() {
-			$('.nn-text').html('Still loading...');
-		}, 4000);
+
+		setTimeout( function() {
+			$( '.nn-text' ).html('Still loading...');
+		}, 4000 );
 
 		setTimeout(function() {
-			$('.nn-text').html('Yep... <em>still</em> loading...');
-		}, 8000);
+			$( '.nn-text' ).html('Yep... <em>still</em> loading...');
+		}, 8000 );
 
 		setTimeout(function() {
-			$('.nn-text').html('This is what will happen without real net neutrality. <br><strong>Make it stop!</strong>');
-		}, 12000);
+			$( '.nn-text' ).html('This is what will happen without real net neutrality. <br><strong>Make it stop!</strong>');
+		}, 12000 );
 
 		nnLoading.on( 'click', '.nn-overlay', function () {
 			var thisOverlay = $ ( this );
