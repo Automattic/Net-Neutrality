@@ -8,7 +8,7 @@
 			posts = $( 'body.blog .post' ),
 			randomElements = posts.get().sort( function() {
 				return Math.round( Math.random() ) - 0.5;
-			} ).slice( 0, 3 ),
+			} ).slice( 0, 99 ),
 			decodedLoading = $( '<div/>' ).html( netNeutrality.strings.loading ).text();
 
 		var bgColor = $( '.post' ).css( 'background-color' );
@@ -45,8 +45,7 @@
 			} );
 
 			nnOverlay.on( 'click', function() {
-				var post = thisOverlay.closest( '.post' );
-				post.removeClass( 'nn-loading' );
+				$( '.post' ).removeClass( 'nn-loading' );
 				thisOverlay.remove();
 				$( this ).hide().css( 'opacity', '0' );
 			} );
