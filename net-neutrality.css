@@ -2,14 +2,18 @@
  * Net Neutrality Protest
  */
 
-#net-neutrality-overlay a, #net-neutrality-overlay, #net-neutrality-ribbon a, #net-neutrality-ribbon {
+/* We duplicated initial selectors to harder styles against themes. We are so sorry. */
+#net-neutrality-overlay#net-neutrality-overlay a,
+#net-neutrality-overlay#net-neutrality-overlay,
+#net-neutrality-ribbon#net-neutrality-ribbon a,
+#net-neutrality-ribbon#net-neutrality-ribbon {
 	-moz-transition: all .3s ease-out;
 	-o-transition: all .3s ease-out;
 	-webkit-transition: all .3s ease-out;
 	transition: all .3s ease-out;
 }
 
-#net-neutrality-overlay {
+#net-neutrality-overlay#net-neutrality-overlay {
 	opacity: 0;
 	position: fixed;
 	bottom: 0;
@@ -34,7 +38,7 @@
 	-webkit-backface-visibility: hidden;
 }
 
-#net-neutrality-overlay div {
+#net-neutrality-overlay#net-neutrality-overlay div {
 	max-width: 500px;
 	position: absolute;
 	box-sizing: border-box;
@@ -48,12 +52,12 @@
 	margin-left: -250px;
 }
 
-#net-neutrality-overlay p {
+#net-neutrality-overlay#net-neutrality-overlay p {
 	margin-bottom: 1em;
 	padding: 0;
 }
 
-#net-neutrality-overlay-close {
+#net-neutrality-overlay-close#net-neutrality-overlay-close {
 	background: none;
 	padding: 10px;
 	border: 0;
@@ -64,16 +68,16 @@
 	text-transform: uppercase;
 }
 
-#net-neutrality-overlay-close:hover {
+#net-neutrality-overlay-close:hover#net-neutrality-overlay-close:hover {
 	color: #000;
 	background: #ffd500;
 }
 
-#net-neutrality-ribbon {
+#net-neutrality-ribbon#net-neutrality-ribbon {
 	opacity: 0;
 }
 
-#net-neutrality-ribbon a {
+#net-neutrality-ribbon#net-neutrality-ribbon a {
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -97,7 +101,7 @@
 	height: 50px;
 }
 
-#net-neutrality-ribbon a:hover {
+#net-neutrality-ribbon#net-neutrality-ribbon a:hover {
 	background: #444;
 	color: #ffd500;
 }
@@ -105,16 +109,16 @@
 
 
 @media (max-width: 640px) {
-	#net-neutrality-ribbon a {
+	#net-neutrality-ribbon#net-neutrality-ribbon a {
 		line-height: 30px;
 		padding: 10px 0;
 		letter-spacing: 0;
 	}
-	#net-neutrality-ribbon a {
+	#net-neutrality-ribbon#net-neutrality-ribbon a {
 		display: block;
 	}
 
-	#net-neutrality-overlay div {
+	#net-neutrality-overlay#net-neutrality-overlay div {
 		max-width: 100%;
 		padding: 30px;
 		top: 60px;
@@ -126,18 +130,18 @@
 }
 
 @media (max-width: 360px) {
-	#net-neutrality-ribbon a {
+	#net-neutrality-ribbon#net-neutrality-ribbon a {
 		display: none;
 	}
 }
 
 @media (max-height: 250px) {
-	#net-neutrality-ribbon a {
+	#net-neutrality-ribbon#net-neutrality-ribbon a {
 		line-height: 20px;
 		padding: 3px 0;
 		letter-spacing: 0;
 	}
-	#net-neutrality-ribbon a {
+	#net-neutrality-ribbon#net-neutrality-ribbon a {
 		display: none;
 	}
 }
@@ -147,7 +151,7 @@
  * Loading class
  */
 
-.nn-loading {
+.nn-loading.nn-loading {
 	position: relative;
 	overflow: hidden;
 	height: 300px;
@@ -155,7 +159,7 @@
 	text-align: center;
 }
 
-.nn-loading .nn-overlay {
+.nn-loading.nn-loading .nn-overlay {
 	content: "" !important;
 	display: block !important;
 	background-color: #fff;
@@ -173,7 +177,7 @@
 	height: auto  !important
 }
 
-.nn-loading .nn-text {
+.nn-loading.nn-loading .nn-text {
 	line-height: 1.6;
 	position: absolute;
 	top: 50%;
@@ -187,8 +191,8 @@
 	margin-left: -100px;
 }
 
-#net-neutrality-stop,
-#net-neutrality-overlay-action {
+#net-neutrality-stop#net-neutrality-stop,
+#net-neutrality-overlay-action#net-neutrality-overlay-action {
 	color: #000;
 	background: #ffd500;
 	display: inline-block;
@@ -203,19 +207,19 @@
 	text-decoration: none;
 }
 
-#net-neutrality-overlay-action {
+#net-neutrality-overlay-action#net-neutrality-overlay-action {
 	padding: 6px 20px;
 	font-size: inherit;
 	outline: 0;
 }
 
-#net-neutrality-stop:hover,
-#net-neutrality-overlay-action:hover {
+#net-neutrality-stop:hover#net-neutrality-stop:hover,
+#net-neutrality-overlay-action:hover#net-neutrality-overlay-action:hover {
 	background: #ffe355;
 	border-bottom: 2px solid #fac540;
 }
 
-#net-neutrality-stop:focus,
-#net-neutrality-overlay-action:focus {
-	box-shadow: 0 0 0 2px white;
+#net-neutrality-stop:focus#net-neutrality-stop:focus,
+#net-neutrality-overlay-action:focus#net-neutrality-overlay-action:focus {
+	box-shadow: 0 0 0 2px #fff;
 }
