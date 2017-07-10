@@ -53,12 +53,18 @@
 	padding: 0;
 }
 
-#net-neutrality-overlay a {
-	color: #ffd500;
+#net-neutrality-overlay-close {
+	background: none;
 	padding: 10px;
+	border: 0;
+	display: inline;
+	font-size: 16px;
+	color: #ffd500;
+	text-decoration: underline;
+	text-transform: uppercase;
 }
 
-#net-neutrality-overlay a:hover {
+#net-neutrality-overlay-close:hover {
 	color: #000;
 	background: #ffd500;
 }
@@ -181,18 +187,35 @@
 	margin-left: -100px;
 }
 
-
-.nn-loading .nn-text strong {
+#net-neutrality-stop,
+#net-neutrality-overlay-action {
 	color: #000;
 	background: #ffd500;
 	display: inline-block;
 	padding: 2px 12px;
 	margin-top: 12px;
 	border-radius: 2px;
+	border: 0;
 	border-bottom: 2px solid goldenrod;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 15px;
+	text-decoration: none;
 }
 
-.nn-loading .nn-text strong:hover {
+#net-neutrality-overlay-action {
+	padding: 6px 20px;
+	font-size: inherit;
+	outline: 0;
+}
+
+#net-neutrality-stop:hover,
+#net-neutrality-overlay-action:hover {
 	background: #ffe355;
 	border-bottom: 2px solid #fac540;
+}
+
+#net-neutrality-stop:focus,
+#net-neutrality-overlay-action:focus {
+	box-shadow: 0 0 0 2px white;
 }
