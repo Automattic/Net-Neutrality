@@ -1,4 +1,4 @@
-<div class="wrap">
+<div class="card">
 	<?php
 		// TODO: This is deprecated. Replace with get_screen_icon();
 		//screen_icon();
