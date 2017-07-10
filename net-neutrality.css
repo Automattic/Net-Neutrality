@@ -66,11 +66,16 @@
 	color: #ffd500;
 	text-decoration: underline;
 	text-transform: uppercase;
+	outline: 0;
 }
 
 #net-neutrality-overlay-close:hover#net-neutrality-overlay-close:hover {
 	color: #000;
 	background: #ffd500;
+}
+
+#net-neutrality-overlay-close:focus#net-neutrality-overlay-close:focus {
+	outline: 1px dotted #ffd500;
 }
 
 #net-neutrality-ribbon#net-neutrality-ribbon {
@@ -204,6 +209,7 @@
 	cursor: pointer;
 	font-weight: bold;
 	font-size: 15px;
+	line-height: 1.5;
 	text-decoration: none;
 	outline: 0;
 }
