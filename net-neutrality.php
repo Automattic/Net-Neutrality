@@ -137,7 +137,7 @@ class Net_Neutrality {
 				<p><?php esc_html_e( 'Help keep the internet free of slow lanes by supporting net neutrality.', 'net-neutrality-wpcom' ); ?></p>
 				<p>
 					<a id="net-neutrality-overlay-action" href="http://battleforthenet.com" target="_blank">
-						<?php esc_html_e( 'Learn more and take action', 'net-neutrality-wpcom' ); ?>
+						<?php esc_html_e( 'Learn more and take&nbsp;action', 'net-neutrality-wpcom' ); ?>
 					</a>
 					<br />
 					<button id="net-neutrality-overlay-close">
