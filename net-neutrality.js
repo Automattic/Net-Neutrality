@@ -11,7 +11,9 @@
 			} ).slice( 0, 99 ),
 			decodedLoading = $( '<div/>' ).html( netNeutrality.strings.loading ).text();
 
-		var bgColor = $( '.post' ).css( 'background-color' );
+		var post = $( '.post' ),
+		    bgColor = ( post.length !== 0 ) ? post.css( 'background-color' ) : '#ffffff';
+
 		if ( bgColor.split( 'rgba' ).length > 1 ) {
 			bgColor = '#fff';
 		}
