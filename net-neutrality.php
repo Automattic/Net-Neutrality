@@ -1,10 +1,9 @@
 <?php
-
 /*
  * Plugin Name: Net Neutrality by WordPress.com
  * Description: Slow your site down to fight for net neutrality.
  * Author:      Automattic
- * Version:     0.0.1
+ * Version:     1.0.0
  * Author URI:  http://wordpress.com
  * License:     GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
