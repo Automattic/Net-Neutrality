@@ -13,7 +13,7 @@
 		?>
 
 		<p>
-			<?php esc_html_e( 'The FCC wants to repeal Net Neutrality rules. Without net neutrality, big cable and telecom companies will be able to divide the Internet into fast and slow lanes. What would the Internet look like without Net Neutrality? Find out by enabling this banner on your site: it shows your support for Net Neutrality by displaying a message on the bottom of your site, and "slowing down" some of your posts.', 'net-neutrality-wpcom' ); ?>
+			<?php esc_html_e( 'The FCC wants to repeal Net Neutrality rules. Without net neutrality, big cable and telecom companies will be able to divide the Internet into fast and slow lanes. What would the Internet look like without Net Neutrality? Find out by enabling this banner on your site: it shows your support for Net Neutrality by displaying a message on the bottom of your site, and "slowing down" some of your posts. <a target="_blank" href="https://en.blog.wordpress.com/2017/07/11/join-us-in-the-fight-for-net-neutrality/">Learn more about Net Neutrality</a>', 'net-neutrality-wpcom' ); ?>
 		</p>
 
 		<p>
