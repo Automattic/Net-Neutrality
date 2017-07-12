@@ -112,7 +112,7 @@ class Net_Neutrality {
 		);
 
 		wp_enqueue_style( 'net-neutrality', plugins_url( 'net-neutrality.css', __FILE__ ), array(), '20140904' );
-		wp_register_script( 'net-neutrality-js', plugins_url( 'net-neutrality.js', __FILE__ ), array(), '20140904' );
+		wp_register_script( 'net-neutrality-js', plugins_url( 'net-neutrality.js', __FILE__ ), array( 'jquery' ), '20140904' );
 		wp_localize_script( 'net-neutrality-js', 'netNeutrality', array(
 			'strings' => array(
 				'loading'         => esc_html__( 'Loading...', 'net-neutrality-wpcom' ),
