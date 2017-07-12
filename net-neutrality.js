@@ -36,27 +36,31 @@
 		}, 12000 );
 
 		nnLoading.on( 'click', '.nn-overlay', function () {
-			var thisOverlay = $ ( this );
-			nnOverlay = $( '#net-neutrality-overlay' );
-			nnOverlay.show().css( 'opacity', '1' )
+			var thisOverlay = $ ( this ),
+				nnOverlay = $( '.nn-overlay' ),
+				nnOverlayWrap = $( '#net-neutrality-overlay' );
+
+			nnOverlayWrap.show().css( 'opacity', '1' );
 			$( '#net-neutrality-overlay-action' ).focus();
 
 			$( '#net-neutality-overlay-content' ).click( function( event ) {
 				event.stopPropagation();
 			} );
 
-			nnOverlay.on( 'click', function() {
+			nnOverlayWrap.on( 'click', function() {
 				$( '.post' ).removeClass( 'nn-loading' );
 				thisOverlay.remove();
-				$( this ).hide().css( 'opacity', '0' );
+				nnOverlay.hide().css( 'opacity', '0' ).remove();
+				nnOverlayWrap.hide().css( 'opacity', '0' );
 				$( '#net-neutrality-ribbon' ).show().css( 'opacity', '1' );
 			} );
 
-			$( '#net-neutrality-overlay-close' ).on( 'click', function() {
+			$( '#net-neutrality-overlay-close' ).on( 'click', function( event ) {
 				event.preventDefault();
 				$( '.post' ).removeClass( 'nn-loading' );
 				thisOverlay.remove();
-				nnOverlay.hide().css( 'opacity', '0' );
+				nnOverlay.hide().css( 'opacity', '0' ).remove();
+				nnOverlayWrap.hide().css( 'opacity', '0' );
 				$( '#net-neutrality-ribbon' ).show().css( 'opacity', '1' );
 			} );
 		} );

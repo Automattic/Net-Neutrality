@@ -4,7 +4,7 @@
  * Plugin Name: Net Neutrality by WordPress.com
  * Description: Slow your site down to fight for net neutrality.
  * Author: Automattic
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author URI: http://wordpress.com
  * License: GPL2+
  * Text Domain: net-neutrality-wpcom
@@ -112,7 +112,7 @@ class Net_Neutrality {
 		);
 
 		wp_enqueue_style( 'net-neutrality', plugins_url( 'net-neutrality.css', __FILE__ ), array(), '20140904' );
-		wp_register_script( 'net-neutrality-js', plugins_url( 'net-neutrality.js', __FILE__ ), array( 'jquery' ), '20140904' );
+		wp_register_script( 'net-neutrality-js', plugins_url( 'net-neutrality.js', __FILE__ ), array( 'jquery' ), '20170712-2' );
 		wp_localize_script( 'net-neutrality-js', 'netNeutrality', array(
 			'strings' => array(
 				'loading'         => esc_html__( 'Loading...', 'net-neutrality-wpcom' ),
